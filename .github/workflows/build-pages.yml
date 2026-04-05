@@ -47,7 +47,7 @@ jobs:
 
       - name: Build docs site
         run: |
-          python pdf_to_github_pages.py "${{ steps.source_pdf.outputs.pdf }}" --output docs --title "${{ github.event.repository.name }}"
+          python pdf_to_github_pages.py "${{ steps.source_pdf.outputs.pdf }}" --output docs --title "${{ github.event.repository.name }}" --dpi 240 --image-format png --thumb-width 300
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
